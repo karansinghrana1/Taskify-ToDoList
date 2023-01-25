@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taskify-Todo App</title>
+    <style>
+    /* Body styles */
+body{
+    background: rgb(182,181,193);
+background: linear-gradient(90deg, rgba(182,181,193,1) 0%, rgba(136,130,130,1) 47%, rgba(119,126,128,1) 100%);
+}
+    
+      
+#todo-list {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(2, 1, 1, 0.8);
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px #ccc;
+}
+
+#add-todo-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#new-todo-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  margin-right: 10px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+#add-todo-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+#todos li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px #ccc;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#todos li span {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+#todos li button {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="todo-list">
+      <form id="add-todo-form">
+        <input type="text" id="new-todo-input" placeholder="Add a new todo">
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todos">
+        <!-- Todo items will be added here dynamically -->
+      </ul>
+    </div>
+    <script src="javscr.js"></script>
+  </body>
+</html>
